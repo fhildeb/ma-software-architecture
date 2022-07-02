@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo:latest
+    volumes:
+      - ./db:/data/db
+    restart: always
+    ports:
+      - 27017:27017
+    container_name: mongo_kpr_2
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    container_name: admin_kpr_2
+  
+  rest:
+    build: express
+    depends_on:
+      - mongo
+    environment:
+      - DBURL=mongo
+    ports:
+      - 1499:1499
+    container_name: rest_kpr_2
