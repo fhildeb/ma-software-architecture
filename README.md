@@ -29,11 +29,11 @@ There were a number of practical applications that fell into two categories: 8 p
 
 ### Pattern Techniques
 
-1. Singleton, Observer, Adapter Patterns
-2. Composite Pattern Tree Structures
-3. WIP
-   - WIP
-   - WIP
+1. Singleton, Observer, Slider Patterns
+2. Composite Pattern Manufacturer Tree
+3. Structual Design Patterns
+   - Proxy Calculator
+   - Mediator Chat
 4. WIP
 5. WIP
    - WIP
