@@ -30,7 +30,7 @@ There were a number of practical applications that fell into two categories: 8 p
 ### Pattern Techniques
 
 1. Singleton Observer Slider Sync
-2. Composite Pattern Manufacturer Tree
+2. Composite Manufacturer Tree
 3. Structual Design Patterns
    - Proxy Calculator
    - Mediator Chat
