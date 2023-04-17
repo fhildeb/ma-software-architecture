@@ -1,16 +1,18 @@
 # Composite Pattern
 
-Custom Library
-
-# Test Pattern
+The Composite pattern is a structural design pattern that enables the composition of objects into tree-like structures to represent part-whole hierarchies. It lets clients treat individual objects and compositions of objects uniformly.
 
 ## CompositeTest (Main)
+
+In this Java console application, the Composite pattern is implemented to represent a simple Bill of Materials structure, consisting of two concrete component classes: Single Part and Assembly. The application demonstrates the organization of a tree-like structure, where Assemblies contain both Single Parts and other Assemblies, each with unique attributes.
+
+The Composite pattern allows for easy calculation and representation of price, weight, and count for both individual components and entire structures, providing a uniform interface for interacting with different object types.
 
 ### Terminal Output
 
 ```
 Aufgabe 2.1
-Test der Composite Pattern 
+Test der Composite Pattern
 
 ----------------------
 Stücklistenstruktur:
