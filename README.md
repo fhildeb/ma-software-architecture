@@ -36,7 +36,7 @@ There were a number of practical applications that fell into two categories: 8 p
    - Mediator Chat
 4. Command and Memento Graphics Editor
 5. WIP
-   - WIP
+   - Vehicle Builder
    - WIP
 
 ###
