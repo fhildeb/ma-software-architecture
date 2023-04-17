@@ -35,9 +35,9 @@ There were a number of practical applications that fell into two categories: 8 p
    - Proxy Calculator
    - Mediator Chat
 4. Command and Memento Graphics Editor
-5. WIP
-   - Vehicle Builder
-   - WIP
+5. Creational Patterns
+   - Vehicle Builder Shop
+   - Template Beverage Preparation
 
 ###
 
