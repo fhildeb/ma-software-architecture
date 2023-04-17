@@ -29,7 +29,7 @@ There were a number of practical applications that fell into two categories: 8 p
 
 ### Pattern Techniques
 
-1. WIP
+1. Singleton, Observer, Adapter Patterns
 2. WIP
    - WIP
    - WIP
