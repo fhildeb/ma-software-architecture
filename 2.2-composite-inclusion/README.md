@@ -1,16 +1,18 @@
 # Composite Pattern
 
-Custom Library
-
-# Test Pattern
+In this application, the Composite pattern represents a Bill of Materials structure with component classes: Single Part and Assembly. The pattern organizes a tree-like structure, where Assemblies contain Single Parts and other Assemblies. It simplifies calculation and representation of price, weight, and count, offering a uniform interface for various object types.
 
 ## CompositeTest (Main)
+
+The program supports the inclusion of multiple instances of assemblies and individual parts within a higher-level assembly. This enhancement brings the application closer to real-world BOM scenarios in industrial production, where components are often used in greater quantities than one.
+
+The solution involves introducing an additional classholding the position number, quantity, and reference to a Component. It enables the management of component quantities within an assembly. Consequently, the calculations for price and weight are updated to incorporate quantities.
 
 ### Terminal Output
 
 ```
 Aufgabe 2.2
-Test der Composite Pattern 
+Test der Composite Pattern
 
 ----------------------
 Stücklistenstruktur:
