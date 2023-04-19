@@ -1,7 +1,6 @@
-version: '3.1'
+version: "3.1"
 
 services:
-
   mongo:
     image: mongo:latest
     volumes:
@@ -9,15 +8,15 @@ services:
     restart: always
     ports:
       - 27017:27017
-    container_name: mongo_kpr_3
+    container_name: mongo_db_backend_survey_app
 
   mongo-express:
     image: mongo-express
     restart: always
     ports:
       - 8081:8081
-    container_name: admin_kpr_3
-  
+    container_name: admin_panel_survey_app
+
   rest:
     build: express
     depends_on:
@@ -26,8 +25,8 @@ services:
       - DBURL=mongo
     ports:
       - 1499:1499
-    container_name: rest_kpr_3
-  
+    container_name: rest_service_survey_app
+
   gui:
     build:
       context: vuejs
@@ -38,4 +37,4 @@ services:
       - rest
     ports:
       - 80:80
-    container_name: gui_kpr_3
+    container_name: vue_gui_survey_app

@@ -1,7 +1,6 @@
-version: '3.1'
+version: "3.1"
 
 services:
-
   mongo:
     image: mongo:latest
     volumes:
@@ -9,21 +8,20 @@ services:
     restart: always
     ports:
       - 27017:27017
-    container_name: mongo_kpr_2
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    container_name: mongo_db_backend_calls
 
   mongo-express:
     image: mongo-express
     restart: always
     ports:
       - 8081:8081
-    container_name: admin_kpr_2
-  
-  rest:
-    build: express
     depends_on:
       - mongo
     environment:
-      - DBURL=mongo
-    ports:
-      - 1499:1499
-    container_name: rest_kpr_2
+      ME_CONFIG_MONGODB_SERVER: mongo_db_backend_calls
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+    container_name: admin_panel_calls

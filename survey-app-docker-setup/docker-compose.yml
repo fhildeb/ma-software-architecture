@@ -11,7 +11,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-    container_name: mongo_db_backend
+    container_name: mongo_db_backend_setup
 
   mongo-express:
     image: mongo-express
@@ -21,7 +21,7 @@ services:
     depends_on:
       - mongo
     environment:
-      ME_CONFIG_MONGODB_SERVER: mongo_db_backend
+      ME_CONFIG_MONGODB_SERVER: mongo_db_backend_setup
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
-    container_name: admin_panel
+    container_name: admin_panel_setup
