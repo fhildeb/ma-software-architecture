@@ -1,10 +1,10 @@
 .PHONY: dockerup dockerdown dockerclean
 
 dockerup:
-	docker-compose -p kpr1 up -d
+	docker-compose up -d
 
 dockerdown:
-	docker-compose -p kpr1 down
+	docker-compose down
 
 dockerclean:
 	docker kill $$(docker ps -q) || true
