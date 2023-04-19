@@ -12,7 +12,7 @@ class Controller {
         console.error(err);
         process.exit(1);
       }
-      this.db = client.db('mydatabase'); // Replace with your database name
+      this.db = client.db('surveys'); // Replace with your database name
       this.umfragen = this.db.collection('Umfragen');
       this.ergebnisse = this.db.collection('Ergebnisse');
       console.log('Database connected...');
