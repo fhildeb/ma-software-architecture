@@ -1,11 +1,14 @@
 <template>
   <div class="about">
-    <h1>Wunderbare Webumfragen</h1>
-    <p>Herzlich willkommen und schön, dass Sie unser tolles Webumfragentool gefunden haben.<br>Es gibt die folgenden Funktionen:</P>
+    <h1>Wonderful Web Surveys</h1>
+    <p>
+      Welcome and glad you found our great web survey tool.<br />There are the
+      following functions:
+    </p>
     <ul>
-      <li>Alle Umfragen auflisten</li>
-      <li>An einer Umfrage teilnehmen</li>
-      <li>Ergebnis einer Umfrage anschauen</li>
+      <li>List all surveys</li>
+      <li>Participate in surveys</li>
+      <li>View results of surveys</li>
     </ul>
   </div>
 </template>

@@ -1,30 +1,30 @@
 <template>
   <div class="umfragenliste">
-    <p>Hier sehen Sie alle Umfragen:</p>
-    <UmfragenEintrag v-for="umfrage in all" :key="umfrage.id" :info="umfrage"
+    <p>List of all surveys:</p>
+    <UmfragenEintrag
+      v-for="umfrage in all"
+      :key="umfrage.id"
+      :info="umfrage"
     ></UmfragenEintrag>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from "vue-property-decorator";
 import { UmfrageService, UmfrageInfo } from "@/rest/UmfrageService";
-import UmfragenEintrag from '@/components/UmfragenEintrag.vue';
+import UmfragenEintrag from "@/components/UmfragenEintrag.vue";
 
 @Component({
   components: {
     UmfragenEintrag,
   },
 })
-export default class UmfragenListe extends Vue
-{
+export default class UmfragenListe extends Vue {
   private all: UmfrageInfo[] = [];
 
-  private async created()
-  {
+  private async created() {
     this.all = await UmfrageService.listUmfragen();
   }
-
 }
 </script>
 

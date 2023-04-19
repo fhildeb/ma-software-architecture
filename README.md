@@ -51,10 +51,11 @@ The app is split into 3 parts:
 
 #### Features
 
-- Browse a comprehensive list of available surveys, presented in a visually appealing and easily navigable format.
-- Access detailed information about each survey, including the survey question and the available answer options.
-- Participate in surveys, utilizing submission handling and real-time response statistics.
-- Review surveys, by looking at the number of votes per option and a visual representation of their popularity.
+- Browse available surveys
+- Access detailed information about each survey
+- Participate in surveys
+- Real-time response statistics
+- Review surveys
 
 ## Tools
 
