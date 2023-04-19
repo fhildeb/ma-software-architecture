@@ -14,6 +14,14 @@ The project sets up a Docker-based environment to manage MongoDB databases using
 
 Additionally, the project integrates data persistence through the use of Docker volumes, which allows users to store MongoDB data outside of the container. This ensures that the data remains available even after shutting down the system, resulting in a more reliable and efficient workflow.
 
+#### Mongo Express Backend
+
+![Mongo Express](/img/survey-app-01.png)
+
+#### Database Setup
+
+![Admin Panel](/img/survey-app-02.png)
+
 ## Development
 
 Install [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/)
