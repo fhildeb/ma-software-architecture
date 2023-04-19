@@ -18,14 +18,14 @@ This project is a RESTful Survey Management System that allows users to create, 
 
 ```bash
 # Install dependencies
-npm install
+cd express && npm install
 
 # Start the Database on Port 27017
 # Read 01-app-docker-setup for more details
-docker-compose up -d
+cd .. && docker-compose up -d
 
 # Run the project
-npm start
+cd express && npm start
 ```
 
 ### Testing
