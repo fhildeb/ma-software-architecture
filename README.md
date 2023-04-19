@@ -43,6 +43,12 @@ There were a number of practical applications that fell into two categories: 8 p
 
 VueJS-powered survey management application offering an interactive platform for users to engage with various surveys.
 
+The app is split into 3 parts:
+
+- `docker-setup`: Starts off by setup up the plain backend infrastructure with MongoDB on Docker and building it using Docker Compose.
+- `restful-survey`: Connects the Docker backend to a custom REST API running on NodeJS while handling authentication, database setups, and enabling various Postman API calls.
+- `vue-platform`: The final part not only integrates the REST API into an Graphical User Interface using VueJS, but also automates the build completely using Dockerfiles in subdirectories. The whole setup and connection is done using communication across containers, allowing for an easy integration without the need to manually and separately maintaining software instances.
+
 #### Features
 
 - Browse a comprehensive list of available surveys, presented in a visually appealing and easily navigable format.
