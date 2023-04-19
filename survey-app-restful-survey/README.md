@@ -191,3 +191,7 @@ cd .. && docker-compose up -d
 # Run the project
 cd express && npm start
 ```
+
+- Run Postman API Calls to: `http://0.0.0.0:1499/`
+- Check MongoDB Entries at: `http://localhost:8081`
+- Database Name: `surveys`
