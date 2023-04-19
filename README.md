@@ -41,6 +41,15 @@ There were a number of practical applications that fell into two categories: 8 p
 
 ### Survey App
 
+VueJS-powered survey management application offering an interactive platform for users to engage with various surveys.
+
+#### Features
+
+- Browse a comprehensive list of available surveys, presented in a visually appealing and easily navigable format.
+- Access detailed information about each survey, including the survey question and the available answer options.
+- Participate in surveys, utilizing submission handling and real-time response statistics.
+- Review surveys, by looking at the number of votes per option and a visual representation of their popularity.
+
 ## Tools
 
 - [Eclipse](https://www.eclipse.org)
