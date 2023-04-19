@@ -16,11 +16,11 @@ Additionally, the project integrates data persistence through the use of Docker 
 
 #### Mongo Express Backend
 
-![Mongo Express](/img/survey-app-01.png)
+![Mongo Express](/img/survey-backend-01.png)
 
 #### Database Setup
 
-![Admin Panel](/img/survey-app-02.png)
+![Admin Panel](/img/survey-backend-02.png)
 
 ## Development
 
