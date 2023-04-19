@@ -12,7 +12,7 @@ This project is a RESTful Survey Management System that allows users to create, 
 
 ### Getting started
 
-1. Install [Node.js](https://nodejs.org/) and [Postman](https://www.postman.com/downloads/)
+1. Install [Node.js](https://nodejs.org/) Version 16 and [Postman](https://www.postman.com/downloads/)
 2. Install [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/)
 3. Install and run the codebase
 

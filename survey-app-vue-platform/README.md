@@ -12,6 +12,7 @@ The survey app enables users to view a list of available surveys, access survey 
 
 ### Run Backend
 
+1. Install [Node.js](https://nodejs.org/) Version 16
 2. Install [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/)
 
 ```bash
