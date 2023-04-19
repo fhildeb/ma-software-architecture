@@ -30,4 +30,148 @@ cd express && npm start
 
 ### Testing
 
-To test the RESTful API endpoints open Postman and create a new survey using the POST method and the `/surveys` endpoint. Check if the newly created survey is listed when you send a `GET` request to the `/surveys` endpoint. Also, try listing the surveys using your web browser by navigating to the appropriate URL. Continue with other methods described in the controller file.
+To test the RESTful API endpoints open Postman and create a new survey using the POST method and the endpoint. Check if the newly created survey is listed when you send a `GET` request to the endpoint. Also, try listing the surveys using your web browser by navigating to the appropriate URL. Continue with other methods described in the controller file.
+
+### API Calls
+
+```bash
+paths:
+  /addUmfrage:
+    post:
+      description: Add a new survey
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: body
+          in: body
+          description: Survey object to add
+          required: true
+          schema:
+            $ref: '#/definitions/Survey'
+      responses:
+        '201':
+          description: Survey created successfully
+        '400':
+          description: Invalid survey object
+
+  /listUmfragen:
+    get:
+      description: List all surveys
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: List of surveys
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Survey'
+
+  /getUmfrage/{id}:
+    get:
+      description: Get a survey by ID
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: ID of the survey to retrieve
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Survey retrieved successfully
+          schema:
+            $ref: '#/definitions/Survey'
+        '404':
+          description: Survey not found
+
+  /vote/{id}/{nr}:
+    post:
+      description: Register a vote for a specific survey and answer
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: ID of the survey to vote on
+          required: true
+          type: string
+        - name: nr
+          in: path
+          description: Index of the answer to vote for
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Vote counted successfully
+        '404':
+          description: Survey not found
+        '406':
+          description: Invalid vote index
+
+  /getStatistic/{id}:
+    get:
+      description: Get the statistics for a survey
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          description: ID of the survey to get statistics for
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Statistics retrieved successfully
+          schema:
+            $ref: '#/definitions/Statistic'
+        '404':
+          description: Survey not found
+
+definitions:
+  Survey:
+    type: object
+    properties:
+      titel:
+        type: string
+        description: Title of the survey
+      frage1:
+        type: string
+        description: First question in the survey
+      antworten1:
+        type: array
+        items:
+          type: string
+        description: Possible answers to the first question
+    required:
+      - titel
+      - frage1
+
+  Statistic:
+    type: object
+    properties:
+      umfrage:
+        type: string
+        description: ID of the survey
+      antworten:
+        type: array
+        items:
+          type: object
+          properties:
+            antwort:
+              type: string
+              description: Answer to the survey question
+            count:
+              type: integer
+              description: Number of votes for the answer
+        description: Results of the survey
+    required:
+      - umfrage
+      - antworten
+
+```
