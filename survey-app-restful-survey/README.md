@@ -1,4 +1,4 @@
-# RESTful Survey Management System
+# Survey Management System
 
 # REST Introduction
 
@@ -30,11 +30,15 @@ cd express && npm start
 
 ### Testing
 
-To test the RESTful API endpoints open Postman and create a new survey using the POST method and the endpoint. Check if the newly created survey is listed when you send a `GET` request to the endpoint. Also, try listing the surveys using your web browser by navigating to the appropriate URL. Continue with other methods described in the controller file.
+> Full Postman Collection within [`testful`](./testful/) directory
+
+To test the RESTful API endpoints open Postman and create a new survey using the POST method and the endpoint. Check if the newly created survey is listed when you send a `GET` request to the endpoint.
+
+> List of API calls can be found below.
 
 ### API Calls
 
-```bash
+```
 paths:
   /addUmfrage:
     post:

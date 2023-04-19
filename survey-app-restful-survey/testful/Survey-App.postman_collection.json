@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "3dbe9cc4-ca4b-4ad8-ab20-c88ed692f3ae",
+		"name": "Survey-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12621953"
+	},
+	"item": [
+		{
+			"name": "listUmfragen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:1499/umfragen/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1499",
+					"path": [
+						"umfragen",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUmfrage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:1499/umfragen/64403a218b3ddc29092cf94c",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1499",
+					"path": [
+						"umfragen",
+						"64403a218b3ddc29092cf94c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUmfrage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"titel\": \"Lieblingsfarbe\", \"text\": \"Was ist Ihre Lieblingsfarbe?\", \"antworten\": [\"blau\",\"rot\",\"gelb\"] }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1499/umfragen",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1499",
+					"path": [
+						"umfragen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1499/umfragen/64403a218b3ddc29092cf94c/vote/1",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1499",
+					"path": [
+						"umfragen",
+						"64403a218b3ddc29092cf94c",
+						"vote",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStatistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:1499/umfragen/64403a218b3ddc29092cf94c/stats",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1499",
+					"path": [
+						"umfragen",
+						"64403a218b3ddc29092cf94c",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
