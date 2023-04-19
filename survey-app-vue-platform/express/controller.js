@@ -5,7 +5,7 @@ const ObjectId = require('mongodb').ObjectID;
 
 class Controller {
   constructor() {
-    const url = 'mongodb://root:example@localhost:27017'; // Replace with your MongoDB URL
+    const url = `mongodb://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.DBURL}:27017`;
     const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
     client.connect((err) => {
       if (err) {
