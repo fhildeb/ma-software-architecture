@@ -1,14 +1,23 @@
+const MongoClient = require('mongodb').MongoClient;
 const Umfrage = require('./umfrage');
 const Ergebnis = require('./ergebnis');
 const ObjectId = require('mongodb').ObjectID;
 
-class Controller
-{
-    constructor(db)
-    {
-        this.umfragen = db.collection("Umfragen");
-        this.ergebnisse = db.collection("Ergebnisse");
-    }
+class Controller {
+  constructor() {
+    const url = 'mongodb://root:example@localhost:27017'; // Replace with your MongoDB URL
+    const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    client.connect((err) => {
+      if (err) {
+        console.error(err);
+        process.exit(1);
+      }
+      this.db = client.db('mydatabase'); // Replace with your database name
+      this.umfragen = this.db.collection('Umfragen');
+      this.ergebnisse = this.db.collection('Ergebnisse');
+      console.log('Database connected...');
+    });
+  }
 
     error(res, code, text, err)
     {

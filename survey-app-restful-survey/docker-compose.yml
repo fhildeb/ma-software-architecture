@@ -11,6 +11,9 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_AUTHENTICATION_MECHANISM: "SCRAM-SHA-1"
+      MONGO_INITDB_SKIP: "true"
+    command: ["mongod", "--auth", "--bind_ip_all"]
     container_name: mongo_db_backend_calls
 
   mongo-express:
