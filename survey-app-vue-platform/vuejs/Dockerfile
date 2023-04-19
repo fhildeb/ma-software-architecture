@@ -1,4 +1,4 @@
-FROM node AS build
+FROM node:16 AS build
 
 ARG REST_HOST
 ARG REST_PORT
